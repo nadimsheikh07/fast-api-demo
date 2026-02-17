@@ -1,0 +1,6 @@
+MONGO_URL = "mongodb://localhost:27017"
+DB_NAME = "fastapi-demo"
+
+SECRET_KEY = "w123123213"
+ALGORITHM = "HS256"
+ACCESS_TOKEN_EXPIRE_MINUTES = 60
