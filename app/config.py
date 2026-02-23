@@ -1,6 +1,15 @@
-MONGO_URL = "mongodb://localhost:27017"
-DB_NAME = "fastapi-demo"
+from pydantic_settings import BaseSettings
 
-SECRET_KEY = "w123123213"
-ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 60
+class Settings(BaseSettings):
+    MONGO_URL: str
+    DB_NAME: str
+
+    SECRET_KEY: str
+    ALGORITHM: str
+    ACCESS_TOKEN_EXPIRE_MINUTES: int
+
+    class Config:
+        env_file = ".env"
+
+
+settings = Settings()
